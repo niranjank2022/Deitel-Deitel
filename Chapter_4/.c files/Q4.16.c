@@ -17,7 +17,12 @@ int main() {
     printf("\n\n");
     for (line = 1; line <= 10; ++line) {
         for (count = 10; count >= line; --count)
+        {
+            if (count == 8 || count == 9)
+                count += 1;
+
             printf("*");
+        }
         
         printf("\n");
     }
@@ -25,7 +30,7 @@ int main() {
     /* Loop 3 */
     printf("\n\n");
     for (line = 1; line <= 10; ++line) {
-        for (count = 10; count >= line; --count)
+        for (count = 12; count >= line; --count)
             printf("*");
         
         printf("\n");
