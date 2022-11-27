@@ -1,0 +1,16 @@
+/* Q. No. 3.22 */
+
+#include <stdio.h>
+
+int main() {
+
+    int n1 = 10, n2 = 10, count = 1;
+
+    printf(" n1\tn2 \n");
+    while (count <= 10) {
+        printf("\n %d\t%d", n1, n2);
+        printf("\n %d\t%d \n", --n1, n2--);
+        ++count;
+    }
+
+}
