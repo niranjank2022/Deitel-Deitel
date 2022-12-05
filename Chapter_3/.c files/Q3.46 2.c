@@ -17,6 +17,7 @@ void main() {
         if (val >= 0 && val <= 2)
             val += 7;
 
+
         else if (val >= 3 && val <= 9)
             val -= 3;
 
@@ -27,10 +28,4 @@ void main() {
     }
 
     printf("\nThe decrypted number : %d", denum);
-
-    
-
-
-
-
 }
