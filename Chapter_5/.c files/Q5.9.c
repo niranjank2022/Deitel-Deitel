@@ -19,7 +19,7 @@ int main() {
         totalc += calculateCharges(hrs);
         totalh += hrs;
     }
-    printf("\n|%7s|%7.1f|%7.2f", "TOTAL", totalh, totalc);
+    printf("\n|%7s|%7.1f|%7.2f|", "TOTAL", totalh, totalc);
 
 }
 
