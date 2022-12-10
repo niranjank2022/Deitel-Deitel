@@ -12,19 +12,18 @@ void main() {
     while (digit >= 1)
     {
         val = ennum / digit;
-        ennum -= val * digit;
+        ennum %= digit;
 
-        if (val >= 0 && val <= 2)
-            val += 7;
+        if (val >= 0 && val <= 6)
+            val += 3;
 
-
-        else if (val >= 3 && val <= 9)
-            val -= 3;
-
+        else if (val >= 7 && val <= 9)
+            val -= 7;
+        
+        printf("%d", val);
         denum += val * digit;
 
         digit /= 10;
-        
     }
 
     printf("\nThe decrypted number : %d", denum);

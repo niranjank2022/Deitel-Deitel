@@ -7,9 +7,10 @@ int main() {
     int numhour;
     float rate, pay;
 
-    do {
-        printf("\nEnter # of hours worked (-1 to end) : ");
-        scanf("%d", &numhour);
+    printf("\nEnter # of hours worked (-1 to end) : ");
+    scanf("%d", &numhour);
+
+    while (numhour != -1) {
 
         printf("Enter hourly rate of the worker : ");
         scanf("%f", &rate);
@@ -21,6 +22,9 @@ int main() {
             pay = (float) 40 * rate + (numhour - 40) * (1.5 * rate);
             printf("Salary is $%.2f.", pay);
         }
-    } while (numhour != -1);
+        // For the next iteration
+        printf("\nEnter # of hours worked (-1 to end) : ");
+        scanf("%d", &numhour);
+    }
 
 }

@@ -9,8 +9,11 @@ int main() {
     printf("\nEnter this week gross : $ ");
     scanf("%f", &weekGross);
 
-    pay = weekGross*0.09 + 200;
+    while (weekGross != -1) {
+        pay = weekGross*0.09 + 200;
+        printf("Your pay is $ %.2f\n", pay);
 
-    printf("\nYour pay is $ %.2f", pay);
-
+        printf("\nEnter this week gross (-1 to end): $ ");
+        scanf("%f", &weekGross);
+    }
 }

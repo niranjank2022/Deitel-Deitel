@@ -12,10 +12,16 @@ void main() {
     for (digit = 1000; digit >= 1; digit /= 10)
     {   
         val = num / digit;
-        num -= val * digit;
-        toAdd = (val + 7) % 10 * digit;
-        printf("%d", toAdd / digit);
-        result += toAdd;
+        num = num % digit;
+
+        if (val >= 0 && val <= 2)
+            val += 7;
+            
+        else if (val >= 3 && val <= 9)
+            val -= 3;
+
+        printf("%d", val * digit);
+        result += val;
     }
 
     printf("\nEncrypted number (ii) : %d", result);

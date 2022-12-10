@@ -7,7 +7,7 @@ void wrongResponse();
 
 void  main() {
 
-    int  num1, num2, resp;
+    int  num1, num2, resp, percent;
     int count = 0, correct = 0, wrong = 0;
     while (++count <= 10)
     {   
@@ -26,7 +26,7 @@ void  main() {
         ++correct;
     }
 
-    int percent = (correct * 100) / (correct + wrong);
+    percent = (correct * 100) / (correct + wrong);
 
     if (percent < 75)
         printf("Please ask your instructor for extra help\n");
