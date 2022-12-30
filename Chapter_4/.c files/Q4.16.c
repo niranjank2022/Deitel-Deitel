@@ -2,56 +2,53 @@
 #include <stdio.h>
 
 int main() {
-    int line, count;
-
-    /* Loop 1 */
-    printf("\n");
-    for (line = 1; line <= 10; ++line) {
-        for (count = 1; count <= line; ++count)
-            printf("*");
+    
+    // Loop 1
+    for (int i = 1; i <= 10; i++) {
         
+        for (int j = 1; j <= i; j++)
+            printf("*");
         printf("\n");
     }
 
-    /* Loop 2 */
-    printf("\n\n");
-    for (line = 1; line <= 10; ++line) {
-        for (count = 10; count >= line; --count)
-        {
-            if (count == 8 || count == 9)
-                count += 1;
+    printf("\n\n\n");
 
+    // Loop 2
+    for (int i = 12; i >= 1; i--) {
+
+        if (i == 10 || i == 8)
+            --i;
+        for (int j = 1; j <= i; j++)
             printf("*");
-        }
-        
         printf("\n");
     }
+    
+    printf("\n\n\n");
 
-    /* Loop 3 */
-    printf("\n\n");
-    for (line = 1; line <= 10; ++line) {
-        for (count = 12; count >= line; --count)
-            printf("*");
-        
-        printf("\n");
+    // Loop 3
+    for (int i = 12; i >= 1; i--) {
 
-        for (count = 1; count <= line; ++count)
+        if (i == 8)
+            i -= 2;
+        for (int j = 1; j <= 12 - i; j++)
             printf(" ");
-        
-    }
-
-    /* Loop 4 */
-    printf("\n\n");
-    for (line = 1; line <= 10; ++line) {
-        for (count = 9; count >= line; --count)
-            printf(" ");
-
-        for (count = 1; count <= line; ++count)
+        for (int j = 1; j <= i; j++)
             printf("*");
-        
         printf("\n");
     }
 
+    printf("\n\n\n");
 
+    // Loop 4
+    for (int i = 1; i <= 10; i++) {
+
+        for (int j = 1; j <= 10 - i; j++)
+            printf(" ");
+        for (int j = 0; j < i; j++)
+            printf("*");
+        printf("\n");
+    }
+
+    printf("\n\n\n");
 }
     

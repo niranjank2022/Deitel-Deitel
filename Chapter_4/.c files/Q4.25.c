@@ -4,8 +4,9 @@
 
  int main() {
    int bin, oct, hex, deci;
+   char ch;
 
-   printf("|DECI|BIN|OCT|HEX|");
+   printf("|DECI|BIN  |OCT|HEX|");
    for (deci = 0; deci <= 20; deci++)
    {  
       printf("\n|%-4d|", deci);
@@ -38,38 +39,39 @@
       /* Finding hexadecimal equivalent */
       hex = deci;
 
-      printf("%d", hex/16);
-      hex %= 16;
-
-      printf("%d", hex);
-      
-      if (hex/16 > 0) {
+      if (hex % 16 >= 10) {
          switch (hex) {
          case 10:
-            hex = 'A';
+            ch = 'A';
+            hex %= 10;
             break;
          case 11:
-            hex = 'B';
+            ch = 'B';
+            hex %= 11;
             break;
          case 12:
-            hex = 'C';
+            ch = 'C';
+            hex %= 12;
             break;
          case 13:
-            hex = 'D';
+            ch = 'D';
+            hex %= 13;
             break;
          case 14:
-            hex = 'E';
+            ch = 'E';
+            hex %= 14;
             break;
          case 15:
-            hex = 'F';
+            ch = 'F';
+            hex %= 15;
             break;
-         
          default:
-            hex = ' ';
+            ch = ' ';
       }
-      printf("%c|", hex);
+      printf("%2c", ch);
       }
-      
+
+      printf("%d|", hex);
    }
    
 
