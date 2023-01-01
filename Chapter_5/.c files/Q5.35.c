@@ -1,4 +1,3 @@
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
@@ -8,7 +7,7 @@ void main() {
     int inp, num;
     char resp;
 
-    srand(time(NULL));
+    srand( time(NULL) );
 
     printf("I have a number between 1 and 1000.\nCan you guess my number?\nPlease type your first guess...");
     resp = 'y';

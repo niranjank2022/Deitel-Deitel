@@ -7,6 +7,7 @@ int flip();
 void main() {
 
     int toss, hCount = 0, tCount = 0;
+    srand( time(NULL) );
     for (int i = 1; i <= 100; i++)
     {
         toss = flip();

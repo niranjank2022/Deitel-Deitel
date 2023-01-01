@@ -23,6 +23,6 @@ int dispFactorial( int num ) {
     else {
         result = num * dispFactorial(num-1);
     }
-    printf("%d ", result);
+    printf("%d! = %d\n", num, result);
     return result;
 }

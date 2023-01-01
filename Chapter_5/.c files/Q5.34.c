@@ -7,29 +7,34 @@ void wrongResponse();
 
 void  main() {
 
-    int  num1, num2, resp, percent;
-    int count = 0, correct = 0, wrong = 0;
-    while (++count <= 10)
-    {   
-        srand(time(NULL));
+    int  num1, num2, resp, totalResps = 0, rightResps = 0;
+    srand( time(NULL) );
+
+    for (int i = 1; i <= 10; i++)
+    {
         num1 = rand() % 10;
         num2 = rand() % 10;
         printf("How much is %d times %d?...", num1, num2);
         scanf("%d", &resp);
+        ++totalResps;
 
         while (resp != num1 * num2) {
             wrongResponse();
             scanf("%d", &resp);
-            ++wrong;
+            ++totalResps;
         }
+
+        ++rightResps;
         correctResponse();
-        ++correct;
     }
-
-    percent = (correct * 100) / (correct + wrong);
-
-    if (percent < 75)
-        printf("Please ask your instructor for extra help\n");
+    float winPercent = (float) rightResps * 100 / totalResps;
+    printf("No. of correct responses : %d\nTotal no. of responses : %d\nPercentage of correct responses : %.2f\%.\n",
+                rightResps, totalResps, winPercent);
+    
+    if (winPercent >= 75)
+        printf("Great! Your performance is pleasing.\n");
+    else
+        printf("Please ask your instructor for extra help.\n");
 }
 
 void correctResponse() {

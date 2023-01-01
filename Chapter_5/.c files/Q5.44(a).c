@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
 
 void correctResponse();
 void wrongResponse();
@@ -44,6 +45,7 @@ void correctResponse() {
 void wrongResponse() {
 
     int num = rand() % 4;
+    printf("\n");
     switch (num) {
         case 0:
             printf("No. Please try again.\n");
